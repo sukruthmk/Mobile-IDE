@@ -1,0 +1,43 @@
+<ion-view title="Mobile IDE" id="page1">
+  <ion-content padding="true" class="has-header">
+    <ion-list id="mobileIDE-list2">
+      <ion-item class="item-icon-right" id="mobileIDE-list-item5" ng-click="output()">Run
+        <i class="icon ion-play"></i>
+      </ion-item>
+    </ion-list>
+    <input type="hidden" ng-model="file"/>
+    <h1 id="mobileIDE-heading1" class="fileNameHeading" style="color:#000000;">HelloWorld.java</h1>
+    <div id="mobileIDE-markdown1" class="show-list-numbers-and-dots">
+        <textarea id="tmpCode" style="display: none;">
+/* HelloWorld.java
+ */
+
+public class HelloWorld
+{
+  public static void main(String[] args) {
+    System.out.println("Hello World!");
+  }
+}
+        </textarea>
+      <textarea id="code" ng-model="code">
+/* HelloWorld.java
+ */
+
+public class HelloWorld
+{
+  public static void main(String[] args) {
+    System.out.println("Hello World!");
+  }
+}
+      </textarea>
+    </div>
+    <div class = "row">
+        <div class="col-50">
+            <button id="mobileIDE-button1" style="text-align:left; width: 90%" class="button button-positive button-block icon-right ion-document" ng-click="newFile()">New File</button>
+        </div>
+        <div class="col-50">
+            <button id="mobileIDE-button1" style="text-align:left; width: 90%" class="button button-positive  button-block icon-right ion-ios-box" ng-click="save()">Save</button>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>
